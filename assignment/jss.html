@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript1</title>
+	<script type="text/javascript" src="current-time.js"></script>
+	<script type="text/javascript"  >
+	
+	function ar()
+	{
+		var x=document.getElementById("rad").value;
+		document.getElementById("res").innerHTML="area of the circle is: "+(x*x*3.14);
+	}
+
+	function myFunction()
+	{
+		document.getElementById("hel").innerHTML="Hello World!";
+	}
+
+
+var arr=[33,12,14,9,40,99,32];
+
+function minimum()
+	{
+
+
+       var i,m;
+       if(arr.length==0)
+       	alert("array is empty");
+       else
+       {
+        
+       	m=arr[0];
+       for(i=1;i<arr.length;i++)
+       	if(arr[i]<m)
+       		m=arr[i];
+       	alert("minimum number is "+m);
+       }
+
+	}
+
+	function maximum()
+	{
+		
+		
+		var i,m;
+       if(arr.length==0)
+       	alert("array is empty");
+       else
+       {
+        
+       	m=arr[0];
+       for(i=1;i<arr.length;i++)
+       	if(arr[i]>m)
+       		m=arr[i];
+       	alert("maximum number is "+m);
+       }
+	}
+
+
+		function itr()
+		{
+			var i;
+			for(i=1;i<=100;i++)
+				if(i%3==0 && i%5==0)
+					console.log("FizzBuzz");
+				else if(i%3==0)
+					console.log("Fizz");
+				else if(i%5==0)
+					console.log("Buzz");
+				else
+					console.log(i);
+
+		}
+
+
+	</script>
+	
+</head>
+<body onload="myFunction()">
+1) Enter the radius of the circle:<input type="number" name="rad" id="rad" min=0>
+<button onclick="ar()">click me</button>
+<h3 id="res"></h3>
+
+2) To start the current time program <button onclick="tm()">Click here</button> 
+<br><br>3) <p id="hel" ></p> 
+<br>
+4) Finding minimum and maximum number in an array (let the array be (33,12,14,9,40,99,32))
+
+
+<button onclick="minimum()">min</button>
+<button onclick="maximum()">max</button>
+<br><br>
+5) Iterating from 1 to 100. <button id="it" onclick="itr()">Click here</button>
+</body>
+</html>
